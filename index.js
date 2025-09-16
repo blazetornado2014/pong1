@@ -121,12 +121,16 @@ function update(){
     if (ball.posX - ball.radius <= 0){
         resetBall();
         player2Score++;
+        if (player2Score >= 20)
+            alert("Player 2 Wins");
     }
 
     //Ball hits right wall
      if (ball.posX + ball.radius >= canvas.width){
         resetBall();
         player1Score++;
+        if (player1Score >= 20)
+            alert("Player 1 Wins");
     }
     drawBoard();
 
